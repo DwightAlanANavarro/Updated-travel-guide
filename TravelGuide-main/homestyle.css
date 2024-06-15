@@ -1,0 +1,210 @@
+/* General reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-image: url('dupe.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0; 
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.0);
+}
+
+/* Add this to make header sticky */
+header.sticky {
+    position: sticky;   
+    background-color: #333; /* Change background color when sticky */
+}
+
+/* Logo styles */
+.logo img {
+    position: absolute;
+    top: -5px; /* Adjust the top position */
+    left: 10px; /* Adjust the right position */
+    width: 220px; /* Adjust the width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Navigation menu styles */
+.navmenu {
+    display: flex;
+    list-style-type: none;
+    margin: 0 auto; /* Center the nav menu */
+    margin-left: 539px;
+    margin-top: 33px;
+    justify-content: space-between;
+}
+
+.navmenu li {
+    margin-right: 50px;
+}
+
+.navmenu li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.navmenu li a:hover {
+    color: #FCBA04;
+}
+
+/* Navigation icon styles */
+.nav-icon a {
+    margin-left: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+
+}
+
+.nav-icon a:hover {
+    color: #FCBA04;
+}
+
+/* Search bar styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Align the search bar to the right */
+    margin-top: 33px;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #555;
+}
+
+.main_container { /* Main container as grid */
+    margin: 210px auto; /* Increase this value to move it further down */
+    position: relative;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px;
+}
+
+.grid-item { /* Grid item styling */
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+.image { /* Image styling */
+    display: block;
+    width: 80%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 39px;
+    right: 0;
+    background: linear-gradient(transparent, #1c1c1c 58%);
+    overflow: hidden;
+    width: 80.10%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.grid-item:hover .overlay {
+    height: 100%;
+}
+
+h1 {
+    width: 100%;
+    margin-top: 20%;
+    color: white;
+    font-size: 3vw;
+    position: absolute;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h3 {
+    text-align: center justify;
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 1.2vw;
+    margin: 38% 0 0 18%;
+    width: 70%;
+    letter-spacing: 5px;
+    line-height: 1.0;
+}
+
+.overlay-button {
+    display: none;
+    position: absolute;
+    bottom: 10px; /* Adjust vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px; /* Increase padding to make it oblong */
+    font-size: 16px; /* Adjust font size */
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 30px; /* Adjust border radius to make it oblong */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* Add gradient */
+    background-image: linear-gradient(to right, #333, #555);
+    /* Add box-shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.overlay-button:hover {
+    background-color: #555;
+    transform: translate(-50%, -3px); /* Add slight upward movement */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhance box-shadow on hover */
+}
+
+.grid-item:hover .overlay-button {
+    display: block;
+}
+
+

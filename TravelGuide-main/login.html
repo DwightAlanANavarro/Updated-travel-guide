@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="bg-img">
+            <img src="2.png" alt="Logo" class="logo">
+            <form action="/login" class="container" onsubmit="showWelcomeMessage(event)">
+                <h1>Login</h1>
+                
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="email"
+                value="test@gmail.com"
+                pattern="[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|students\.national-u\.edu\.ph|outlook\.com)" 
+                title="Email must be one of the following domains: @gmail.com, @yahoo.com, @students.national-u.edu.ph, @outlook.com" required>
+                
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" maxlength="20" value="testuser" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw"
+                value="Password123!" 
+                pattern="(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}" 
+                title="Password must be at least 8 characters long and include at least one number, one special character, and one uppercase letter." required>
+
+                <button type="submit" class="btn">Tara, Ka-Juander?</button>
+            </form>
+        </div>
+
+        <script>
+            function showWelcomeMessage(event) {
+                event.preventDefault(); // Prevent the form from submitting
+
+                // Get the username value
+                const username = document.querySelector('input[name="username"]').value;
+
+                // Show the welcome message
+                alert(`Welcome, Ka-Juander ${username}`);
+
+                // Redirect to the homepage
+                window.location.href = 'homepage1.html';
+            }
+        </script>
+    </body>
+</html>
+
